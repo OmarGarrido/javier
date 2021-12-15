@@ -1,0 +1,39 @@
+<div>
+  <app-widget-area [data]="lollipop"></app-widget-area>
+</div>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+
+<app-widget-drilldown [data]="columnData" [datadrill]="columnDataDrill"></app-widget-drilldown>
+
+<br>
+
+<mat-divider></mat-divider>
+<br>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards" style="padding: 10px;">
+  <mat-card fxFlex="25">
+    <app-widget-contagios label="Contagios" total="60" percentage="20%"></app-widget-contagios>
+  </mat-card>
+  <mat-card fxFlex="75">
+    <app-widget-lollipop label="Nuevos contagios" [data]="cards" type="areaspline"></app-widget-lollipop>
+    <br>
+    <mat-divider></mat-divider>
+    <br>
+    <app-widget-lollipop label="Media de contagios" [data]="lows" type="line"></app-widget-lollipop>
+  </mat-card>
+
+</div>
+
+<!-- <mat-divider></mat-divider>
+
+<div>
+  <div>Table</div>
+  <div>Pie Chart</div>
+</div> -->

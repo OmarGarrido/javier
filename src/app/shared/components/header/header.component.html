@@ -1,0 +1,37 @@
+<mat-toolbar color='primary'>
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="toggleSideBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Dashboard Covid</span>
+    <!-- <img class="logo" src="https://firebasestorage.googleapis.com/v0/b/flutter-notificaciones-5a781.appspot.com/o/Assets%2Ftese%20logo%20sin%20fondo.png?alt=media&token=3238556d-b35b-46e7-98ce-df4a1867e972"> -->
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGap="20pxy">
+        <li>
+          <button mat-icon-button>
+            <mat-icon>settings</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-icon-button>
+            <mat-icon>help_outline</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>person_outline</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>exit_to_app</mat-icon>
+              Sign Out
+            </button>
+
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
